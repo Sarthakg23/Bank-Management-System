@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<style>
+
+body {
+  background-color: olive;
+}
+h1 {
+  color: Black;
+  margin-left: 40px;
+
+}
+div {
+  padding: 210px 50px 150px 480px;
+}
+
+</style>
+<b>Credit Form</b>
+<br>
+
+<form action="" method="POST">
+    {% csrf_token %}
+
+      <input type ="hidden", name="user_id", id="id_user_id", value={{ user_id }}>
+    {{ user_debit_form.as_p }}
+
+    <button type = "submit">Submit</button>
+</form>
+
+</body>
+</html>

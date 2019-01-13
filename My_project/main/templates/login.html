@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<h1><b>XYZ BANK</b></h1>
+<style>
+
+body {
+  background-color: olive;
+}
+h1 {
+  color: Black;
+  margin-left: 40px;
+
+}
+div {
+  padding: 210px 50px 150px 480px;
+}
+
+</style>
+<div>
+    <h1><b><u>Login Form</u></b></h1>
+<br>
+<img src ="My_project/media/im.jpg">
+
+<form action="" method="POST">
+    {% csrf_token %}
+
+    {{ user_loginform.as_p }}
+
+    <button type = "submit">Submit</button>
+    <a href="/signup/"><button type = button><b>New User</b></button></a>
+    </form>
+
+
+  </div>
+</body>
+</html>

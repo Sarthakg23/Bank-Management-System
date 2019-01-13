@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<style>
+
+body {
+  background-color: olive;
+}
+h1 {
+  color: Black;
+  margin-left: 40px;
+
+}
+div {
+  padding: 210px 50px 150px 480px;
+}
+
+</style>
+
+<b>CREDIT</b>
+{% for credit in credits %}
+<li>{{ credit.date }}  {{ credit.credit }} {{ credit.description }}
+    {% endfor %}</li>
+
+
+<b>DEBIT</b>
+{% for debit in debits %}
+<li>{{ debit.date }}  {{ debit.debit }} {{ debit.description }}
+{% endfor %}</li>
+
+<b>TRANSFER</b>
+{% for transfer in transfers %}
+<li><b>TRANSFERED ON</b>{{ transfer.date }} <b>TRANSFERED TO</b> {{ transfer.receiver }} <b>AMOUNT</b> {{ transfer.amount }}
+{% endfor %}</li>
+
+    <b>RECEIVED</b>
+{% for received in receivings %}
+<li><b>RECEIVED ON</b>{{ received.date }} <b>RECEIVED FROM</b> {{ received.user }} <b>AMOUNT</b> {{ received.amount }}
+    {% endfor %}</li>
+
+
+
+</body>
+</html>

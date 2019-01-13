@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+
+body {
+  background-color: olive;
+}
+h1 {
+  color: Black;
+  margin-left: 40px;
+
+}
+div {
+  padding: 210px 50px 150px 480px;
+}
+
+</style>
+<b>Welcome {{user.name}} Your balance is {{user.balance}}</b>
+<br>
+
+<form action="" method="POST">
+    {% csrf_token %}
+
+    {{ user_form.as_p }}
+
+
+</form>
+<div><b>Transaction</b>
+    <li> <a href="/credit/?user_id={{user.id}}"><button type = button><b>Credit</b></button></a>
+    <a href="/debit/?user_id={{user.id}}"><button type = button><b>Debit</b></button></a>
+    </li>
+    <a href="/acc_state/?user_id={{user.id}}"><button type = button><b>Account_Statement</b></button></a>
+
+    <a href="/transfer/?user_id={{user.id}}"><button type = button><b>Money_Transfer</b></button></a>
+    <a href="/login/"><button type = button><b>Logout</b></button></a>
+</div>
+
+
+</body>
+</html>

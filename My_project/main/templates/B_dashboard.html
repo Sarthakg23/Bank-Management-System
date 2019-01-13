@@ -1,0 +1,27 @@
+<style>
+
+body {
+  background-color: olive;
+}
+h1 {
+  color: Black;
+  margin-left: 40px;
+
+}
+div {
+  padding: 210px 50px 150px 480px;
+}
+
+</style>
+<b>Users in Bank</b>
+{% for user in users %}
+<li>{{ user.name}}
+{% endfor %}</li>
+
+<b>With Balance</b>
+{% for user in users %}
+<li>{{ user.balance}}
+{% endfor %}</li>
+
+<b>Total Balance</b>
+{{ Sum }}
